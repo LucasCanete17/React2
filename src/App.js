@@ -1,17 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './components/NavBar';
+import ItemListContainer from './components/ItemListContainer';
 
 function App() {
+
+  const saludo = 'Bienvenidos a BECKA'
   return (
     <div className="App">
 
       <NavBar/>
 
-      <div>
-      <h1>Tienda de Ropita carteluda</h1>
-      <h2>Ropa Exclusiva</h2>
-      </div>
+      
+      
+      
+
+      <ItemListContainer saludo= {saludo}/>
+      
 
       <div>footer</div>
     </div>
@@ -19,3 +24,4 @@ function App() {
 }
 
 export default App;
+
