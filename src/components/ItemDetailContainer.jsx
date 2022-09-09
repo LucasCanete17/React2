@@ -19,7 +19,7 @@ const ItemDEtailContainer = () => {
     },[])
 
   return (
-    <div>
+    <div className="cardContainer">
         {loading ? <p> Cargando...</p> : <ItemDeatil productDetail={productDetail}/>}         
     </div>
   )

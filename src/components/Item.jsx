@@ -1,17 +1,22 @@
 import React from 'react';
+import {product} from '../mocks/moksData'
 
 export default function Item({productos}) {
 
     return (
-        <div>
+        <div className='card' style={{width:'18rem', margin:'.5rem'}}>
+            <p>{productos.name}</p>
             
-                <img
+            <img className='imagen'
+                src = {productos.img} alt=''
                 width={200}
                 height={260}
-                alt={productos.id}
-                />
-                <p>{productos.name}</p>
-                <h3>{`Precio: $${productos.price}`} </h3>
+            />
+                
+                
+            <h3>{`Precio: $${productos.price}`} </h3>
+            <h3>Stock: {productos.stock}</h3>
+            <button style={{margin:".5rem"}}> Ver Mas </button>
             
         </div>
     )

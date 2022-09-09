@@ -2,6 +2,25 @@
   text-align: center;
 }
 
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  background-color:#dae0c1;
+  border: #282c34 solid;
+  
+}
+
+.imagen{
+  border: #282c34 solid;
+  
+}
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

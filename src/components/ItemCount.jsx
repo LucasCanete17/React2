@@ -18,10 +18,10 @@ const ItemCount = ({ initial, stock, onAdd }) => {
   return (
     <div
       style={{
-        padding: '1rem',
+        padding: '2rem',
         display: 'flex',
         flexDirection: 'column',
-        justifyContent: 'space-between',
+        justifyContent: 'space-around',
         alignItems: 'center',
       }}
     >

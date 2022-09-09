@@ -7,12 +7,12 @@ import {product} from '../mocks/moksData'
 export default function Promesa() {
 
   const [loading, setLoading] = useState(true);
-  const [productos, setProductos] = useState ([]);
+  const [productos, setProduct] = useState ([]);
   const [error, setError] = useState('');
     
    data
     .then((res) => {
-      setProductos(res);
+      setProduct(res);
     })
     .catch((err) => {
       setError(err);
@@ -23,7 +23,9 @@ export default function Promesa() {
 
   return (
     <div>
-       {loading ? <p>'Loading...</p> : <ItemList productos={product}/>}
+       {loading ? <p>'Loading...</p> :
+        <ItemList productos={product}/>}
+       
       
     </div>
   )}
