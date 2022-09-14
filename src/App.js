@@ -4,6 +4,8 @@ import NavBar from './components/NavBar';
 import ItemListContainer from './components/ItemListContainer';
 import ItemCount from './components/ItemCount';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import Cart from './components/Cart';
 
 function App() {
 
@@ -16,12 +18,21 @@ function App() {
   return (
     <div className="App">
 
-      <NavBar/>
-      <ItemListContainer/>
-      <ItemCount stock={10} initial={1} onAdd={onAdd}/>
-      <ItemDetailContainer/>
-      
+      <BrowserRouter>
 
+      <NavBar/>
+        <Routes>
+          <Route path='/' element={ <ItemListContainer/> } />
+          <Route path='/categoria/:categoriaId' element={ <ItemListContainer/> } />
+          <Route path='/detalle/:id' element={ <ItemDetailContainer/> }/>
+          <Route path='/cart' element={<Cart/>} />
+
+        </Routes>
+      
+    
+      
+      
+      </BrowserRouter>
       <div>footer</div>
     </div>
   );

@@ -1,19 +1,19 @@
 import React, { useState } from 'react';
 
-const ItemCount = ({ initial, stock, onAdd }) => {
-  const [contador, setContador] = useState(initial);
-
-  const sumar = () => {
-    if (contador < stock) {
-      setContador(contador + 1);
-    }
-  };
+const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
+  
 
   const restar = () => {
-    if (contador > 0) {
-      setContador(contador - 1);
+    if (count > initial) {
+      setCount(count - 1);
     }
-  };
+  }
+
+  const sumar = () => {
+    if (count < stock) {
+      setCount(count + 1);
+    }
+  }
 
   return (
     <div
@@ -29,7 +29,7 @@ const ItemCount = ({ initial, stock, onAdd }) => {
         <button className="btn btn-danger" onClick={restar}>
           -
         </button>
-        <span className="btn btn-ligth">{contador}</span>
+        <span className="btn btn-ligth">{count}</span>
         <button className="btn btn-success" onClick={sumar}>
           +
         </button>

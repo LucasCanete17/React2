@@ -13,9 +13,10 @@ import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import CarWidget from "./CarWidget";
+import { NavLink } from 'react-router-dom';
 
-const pages = ['Products', 'Pricing', 'Blog'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+const page = [{enlace:'/categoria/oferta', nombre:'oferta'},{enlace:'/categoria/combos', nombre:'combos'}];
+
 
 export default function NavBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -40,25 +41,25 @@ export default function NavBar() {
     <AppBar position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx= {{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+         <NavLink to='/'>
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
               fontFamily: 'monospace',
               fontWeight: 700,
               letterSpacing: '.3rem',
-              color: 'inherit',
+              color: 'white',
               textDecoration: 'none',
             }}
+            
           >
             BECKA
           </Typography>
-
+          </NavLink>
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
@@ -88,9 +89,9 @@ export default function NavBar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+              {page.map((page, index) => (
+                <MenuItem key={index} onClick={page.enlace}>
+                  <NavLink className='links' to={page.enlace}>{page.nombre}</NavLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -115,15 +116,11 @@ export default function NavBar() {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          {page.map((page, index) => (
+                <MenuItem key={index} onClick={page.enlace}>
+                  <NavLink className='link' to={page.enlace}>{page.nombre}</NavLink>
+                </MenuItem>
+              ))}
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>

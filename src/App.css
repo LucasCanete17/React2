@@ -9,6 +9,15 @@
   flex-wrap: wrap;
 }
 
+.link{
+  color: white;
+  text-decoration: none;
+}
+
+.links{
+  color: black;
+}
+
 .card{
   background-color:#dae0c1;
   border: #282c34 solid;
@@ -17,6 +26,7 @@
 
 .imagen{
   border: #282c34 solid;
+  margin: 20px;
   
 }
 
