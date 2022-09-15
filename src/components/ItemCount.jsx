@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
   
@@ -26,15 +26,15 @@ const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
       }}
     >
       <div>
-        <button className="btn btn-danger" onClick={restar}>
+        <button onClick={restar}>
           -
         </button>
-        <span className="btn btn-ligth">{count}</span>
-        <button className="btn btn-success" onClick={sumar}>
+        <span >{count}</span>
+        <button  onClick={sumar}>
           +
         </button>
       </div>
-      <button className="btn btn-primary m-2" onClick={onAdd}>
+      <button  onClick={onAdd}>
         Comprar
       </button>
     </div>
