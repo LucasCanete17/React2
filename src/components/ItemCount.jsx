@@ -14,7 +14,7 @@ const ItemCount = ({ initial, stock, onAdd, count, setCount }) => {
       setCount(count + 1);
     }
   }
-
+console.log(sumar)
   return (
     <div
       style={{

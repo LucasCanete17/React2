@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import CarWidget from "./CarWidget";
+import CartWidget from "./CartWidget";
 import { NavLink } from 'react-router-dom';
 
 const page = [{enlace:'/categoria/oferta', nombre:'oferta'},{enlace:'/categoria/combos', nombre:'combos'}];
@@ -123,8 +123,8 @@ export default function NavBar() {
               ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <CarWidget cant={0}/>
+          <Box>
+            <CartWidget/>
           </Box>
         </Toolbar>
       </Container>
