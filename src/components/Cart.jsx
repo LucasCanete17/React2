@@ -1,17 +1,3 @@
-/*import React from 'react'
-import { useCart} from '../context/CartContext'
-
-const Cart = () => {
-  const {cart}=useCart()
-  console.log('carrito', cart)
-  return (
-    <div>Cart</div>
-  )
-}
-
-export default Cart*/
-
-
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useCart } from '../context/CartContext'
@@ -32,8 +18,7 @@ console.log(cart)
         </div>
         :<div style={{display:'flex', flexDirection:'column', alignItems:'center'}}>
           <h2>Tu carrito</h2>
-            {cart.map((compra)=>
-             <CartItem key={compra.id} compra={compra}/>)}
+            {cart.map((compra)=> <CartItem key={compra.id} compra={compra}/>)}
             <span>Total a pagar : ${cartTotal()}</span>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', padding:'2rem'}}>
             <button  onClick={clear}>Vaciar Carrito</button>

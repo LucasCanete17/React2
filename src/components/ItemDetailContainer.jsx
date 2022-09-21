@@ -13,7 +13,7 @@ const ItemDEtailContainer = () => {
     const [loading, setLoading] = useState(true);
     const{id} = useParams()
 
-/*
+
     useEffect(()=>{
       const coleccionProductos = collection(db, "products")
       const referenciaDoc = doc(coleccionProductos, id)
@@ -26,15 +26,15 @@ const ItemDEtailContainer = () => {
       })
       .catch((error)=> console.log(error))
       .finally(()=> setLoading(false))
-    },[])*/
-
+    },[])
+/*
     useEffect(()=>{
         data
         .then((res)=> setProductDetail(res.find((product)=> product.id === id)))
         .catch((error)=> console.log(error))
         .finally(()=> setLoading(false))
     },[id])
-
+*/
   return (
     <div className="cardContainer">
         {loading ? <p> Cargando...</p> : <ItemDeatil productDetail={productDetail}/>}         

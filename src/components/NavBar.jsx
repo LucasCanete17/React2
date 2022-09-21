@@ -124,7 +124,9 @@ export default function NavBar() {
           </Box>
 
           <Box>
+            <NavLink to='/cart'>
             <CartWidget/>
+            </NavLink>
           </Box>
         </Toolbar>
       </Container>

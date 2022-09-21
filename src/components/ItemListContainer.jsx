@@ -7,15 +7,13 @@ import { db } from '../firebase/firebase'
 
 
 const ItemListContainer = () =>{
-  const [productList, setProductList]= useState([])
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
   const [product, setProduct] = useState ([]);
-  const [setError] = useState('');
   const{categoriaId}= useParams();
   
   
   //firebase
-/*
+
   useEffect(()=>{
     setLoading(true)
     const productos = categoriaId ? query(collection(db, "products"), where("categoria",  "==", categoriaId)) : collection(db, "products")
@@ -27,11 +25,11 @@ const ItemListContainer = () =>{
           ...product.data()
         }
       })
-      setProductList(lista)
+      setProduct(lista)
     })
     .catch((error)=>console.log(error))
     .finally(()=>setLoading(false))
-  },[categoriaId])*/
+  },[categoriaId])
 
 
 
@@ -39,8 +37,9 @@ const ItemListContainer = () =>{
 
 
 //mock
-
-  useEffect(()=>{})
+/*
+  useEffect(()=>{
+  setLoading(true)
    data
     .then((res) => {
       if(categoriaId){
@@ -50,13 +49,12 @@ const ItemListContainer = () =>{
         setProduct(res)
         }
       })
-    .catch((err) => {
-      setError(err);
-    })
-    .finally(() => {
-      setLoading(false)
+      .catch((error)=> console.log(error))
+      .finally(()=> setLoading(false))
     },[categoriaId]);
-    console.log(productList)
+    
+*/
+
   return (
     <div>
        {loading ? <p>'Loading...</p> :
