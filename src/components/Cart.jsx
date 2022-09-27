@@ -22,7 +22,7 @@ console.log(cart)
             <span>Total a pagar : ${cartTotal()}</span>
             <div style={{display:'flex', justifyContent:'space-between', alignItems:'center', padding:'2rem'}}>
             <button  onClick={clear}>Vaciar Carrito</button>
-            <button>Terminar compra</button>
+            <button onClick={()=>navegar('/checkout')} >Terminar compra</button>
             </div>
         </div>
       }

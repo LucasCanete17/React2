@@ -8,7 +8,7 @@ const ItemDeatil = ({productDetail}) => {
     const [compra, setCompra]= useState(false)
     const {name, descripcion, price, stock, id} = productDetail
     const navegar = useNavigate()
-    const {addItem}= useCart
+    const {addItem}= useCart()
     
     const onAdd=()=>{
          let purchase = {
