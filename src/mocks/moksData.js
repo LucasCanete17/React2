@@ -1,50 +1,50 @@
 export const product = [
-    {id:  '100',
+    {
     name: 'combo 1',
     img: 'https://i.postimg.cc/RF759T3W/jeans-y-remera.jpg',
     price: 800,
-    descripcion: 'Campera y Cartera',
+    descripcion: 'Remera y pantalon de jeans',
     stock: 10,
     categoria: 'oferta'},
 
-    {id: '101',
+    {
     name: 'combo 2',
     img: "https://i.postimg.cc/pds8zL24/Buzo.jpg",
     price: 1500,
-    descripcion: 'buzo',
+    descripcion: 'Remera con estampa',
     stock: 10,
     categoria: 'oferta'},
 
 
-    {id: '102',
+    {
     name: 'combo 3',
-    img: 'https://i.postimg.cc/nh3Lfpyy/campera-y-cartera.jpg',
+    img: 'https://i.postimg.cc/SR55Mvc2/pexels-anj-namoro-2850487.jpg',
     price: 2500,
-    descripcion: 'buzo y pantalon',
+    descripcion: 'Remera con saquito sin mangas',
     stock: 10,
     categoria: 'oferta'},
 
-    {id: '103',
+    {
     name: 'combo 4',
-    img: 'https://i.postimg.cc/nh3Lfpyy/campera-y-cartera.jpg',
+    img: 'https://i.postimg.cc/zBGPPrjH/pexels-dom-j-45057.jpg',
     price: 2500,
-    descripcion: 'buzo y pantalon',
+    descripcion: 'Par de guantes',
     stock: 10,
     categoria: 'oferta'},
 
-    {id: '104',
+    {
     name: 'combo 5',
-    img: 'https://i.postimg.cc/nh3Lfpyy/campera-y-cartera.jpg',
+    img: 'https://i.postimg.cc/SQ8tTDLr/pexels-terje-sollie-298863.jpg',
     price: 2500,
-    descripcion: 'buzo y pantalon',
+    descripcion: 'Camisa a lunares y par de zapatos color marron',
     stock: 10,
     categoria: 'combos'},
 
-    {id: '105',
+    {
     name: 'combo 6',
     img: 'https://i.postimg.cc/nh3Lfpyy/campera-y-cartera.jpg',
     price: 2500,
-    descripcion: 'buzo y pantalon',
+    descripcion: 'Campera y cartera',
     stock: 10,
     categoria: 'combos'}, 
   ];
