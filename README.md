@@ -76,3 +76,6 @@ LIBRERIAS UTILIZADAS
 En esta oportunidad utilizamos Firebase y Material UI 
 
 <img src="https://youtu.be/_41ENuqIqlo">
+
+
+![2022-10-10 23-48-56](https://user-images.githubusercontent.com/94414757/195172467-929dd5e3-cdf7-4d73-9003-a912ebc93c71.gif)
